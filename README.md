@@ -1,10 +1,10 @@
 Design
 
 Machine (Interface)
- power_on: bool
+ power(state): bool
 
 Oven (Machine)
- power_on: bool
+ power(state): bool
  temp: int
  COOLING_RATE: 
  HEATING_RATE:
@@ -20,7 +20,7 @@ Stamper (PulseMachine)
  pulse() => stamp()
 
 Belt (Machine)
- power_on: bool
+ power(state): bool
  slots: list
  machines: dict
  action() => move()
