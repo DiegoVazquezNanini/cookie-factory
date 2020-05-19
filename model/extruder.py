@@ -1,5 +1,6 @@
 
 from model.cookie import Dollop
+from model.interfaces import PulseMachine
 
 class Extruder(PulseMachine):
     """Extruder class"""

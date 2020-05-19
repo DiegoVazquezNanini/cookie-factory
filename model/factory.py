@@ -7,22 +7,22 @@ from enum import Enum
 
 class Switch(Enum):
     """Swicth Enum"""
-    ON = 0
-    OFF = 1
-    PAUSE = 2
+    ON = "ON"
+    OFF = "OFF"
+    PAUSE = "PAUSE"
 
 class Factory:
     """Factory Class"""
     def __init__(self):
         self._belt = Belt()
         self._bin = Bin()
-        self.switch = Switch.OFF
+        self._switch = Switch.OFF
         self._timer = Timer(self._interval, self._time_interval)
         self._timer.start()
 
 
     def switch(self, state):
-        self.switch = state
+        self._switch = state
 
 
 

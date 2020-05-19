@@ -1,4 +1,5 @@
 from model.cookie import Dollop, Cookie
+from model.interfaces import PulseMachine
 
 class Stamper(PulseMachine):
     """ """
@@ -8,9 +9,9 @@ class Stamper(PulseMachine):
     def power(self, state = True):
         self._power = state
     
-    def pulse(self):
+    def pulse(self, obj):
         if self._power:
-            self._stamp()
+            self._stamp(obj)
 
     def _stamp(self, obj):
         if isinstance(obj, Dollop):
